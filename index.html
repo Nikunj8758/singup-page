@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singup</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        border: border-box;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        font-family: 'Ysabeau Office', sans-serif;
+        background-image: url(https://imgtr.ee/images/2023/06/30/425da3a73c459e7e739932d73883c3e7.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .main{
+        background-color: #292c30cf;
+        box-shadow: 10px 5px 5px #00000049;
+        width: 30rem;
+        height: 40rem;
+        border: none;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        transition: all .3s linear;
+    }
+    h1{
+        font-size:3.5rem;
+        background-color: red;
+        background-image: linear-gradient(90deg,#2777b5,#c07070,#d59f29);
+        -webkit-background-clip : text ;
+        -webkit-text-fill-color: transparent;
+        transition: all .3s linear;
+    }
+    input{
+        width: 20rem;
+        height: 3rem;
+        background-color: transparent;
+        border: none;
+        border-bottom :2px solid #ffffff;
+        color: #ffffff;
+        font-size: 1.2rem;
+        font-weight: 500;
+        outline: none;
+        transition: all 50ms linear;
+        
+    }
+    input:hover{
+        transform: translateY(2px);
+        
+    }
+
+    input:focus{
+        transform: translateY(2px);
+        border-color: #2777b5;
+    }
+
+    input::placeholder{
+        font-size: 1.2rem;
+        color: #b7b7b7;
+        font-weight: 500;
+        height: 10rem;
+        width: 100%;
+        
+    }
+    .button{
+        width: 18rem;
+        height: 2.7rem;
+        font-size: 1.2rem;
+        background-color: #61a7dc;
+        border: none;
+        border-radius: 50px;
+        transition: all 50ms linear;
+        
+    }
+    .button:active{
+        background-color: #076fde;
+        /* transform: scale(1.1); */
+    }
+    .button:hover{
+        /* transform: scale(.9); */
+        background-image: linear-gradient(to right,#08b2cc,#0793de,#076fde);
+    }
+    @media screen and (max-width:500px) {
+
+        .main{
+            width: 20rem;
+            height: 30rem;
+            
+        }
+        h1{
+            font-size:2.5rem;
+        }
+        input{
+            width: 12rem;
+            height: 2rem;
+        }
+        .button{
+        width: 10rem;
+        height: 2.4rem;
+        }
+    }
+
+</style>
+<body>
+    <form action="#">
+        <div class="main">
+            <h1>Login</h1>
+            <input type="text" name="name" id="name" placeholder="Name" required >
+            <input type="text" name="username" id="username" placeholder="Username" required minlength="6" maxlength="10">
+            <input type="text" name="Mo.NO." id="Number" placeholder="10 Digit Mo.No" minlength="10" maxlength="10">
+            <input type="date" name="BirthDate" id="Date" >
+            <input type="email" name="Email-id" id="email" placeholder="Email" required>
+            <input type="password" name="password" id="password" placeholder="Password " required minlength="6">
+            <input type="submit" value="Submit" class="button">
+        </div>
+    </form>
+</body>
+</html>
