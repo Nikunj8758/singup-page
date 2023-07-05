@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Singup</title>
+    <title>Login</title>
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office&display=swap');
@@ -28,7 +28,7 @@
         background-color: #292c30cf;
         box-shadow: 10px 5px 5px #00000049;
         width: 30rem;
-        height: 40rem;
+        height: 25rem;
         border: none;
         border-radius: 20px;
         display: flex;
@@ -45,7 +45,8 @@
         -webkit-text-fill-color: transparent;
         transition: all .3s linear;
     }
-    input{
+    #email,
+    #password{
         width: 20rem;
         height: 3rem;
         background-color: transparent;
@@ -58,17 +59,20 @@
         transition: all 50ms linear;
         
     }
-    input:hover{
+    #email:hover,
+    #password:hover{
         transform: translateY(2px);
         
     }
 
-    input:focus{
+    #email:focus,
+    #password:focus{
         transform: translateY(2px);
         border-color: #2777b5;
     }
 
-    input::placeholder{
+    #email::placeholder,
+    #password::placeholder{
         font-size: 1.2rem;
         color: #b7b7b7;
         font-weight: 500;
@@ -76,7 +80,7 @@
         width: 100%;
         
     }
-    .button{
+    button{
         width: 18rem;
         height: 2.7rem;
         font-size: 1.2rem;
@@ -86,29 +90,39 @@
         transition: all 50ms linear;
         
     }
-    .button:active{
+    button:active{
         background-color: #076fde;
-        /* transform: scale(1.1); */
+        transform: scale(1.1);
     }
-    .button:hover{
+    button:hover{
         /* transform: scale(.9); */
         background-image: linear-gradient(to right,#08b2cc,#0793de,#076fde);
+    }
+    p a{
+        font-size: 1.1rem;
+        color: #08b2cc;
+        transition: all 50ms linear;
+    }
+    p a:hover{
+        color: #dea807;
+        
     }
     @media screen and (max-width:500px) {
 
         .main{
             width: 20rem;
-            height: 30rem;
+            height: 20rem;
             
         }
         h1{
             font-size:2.5rem;
         }
-        input{
+        #email,
+        #password{
             width: 12rem;
             height: 2rem;
         }
-        .button{
+        button{
         width: 10rem;
         height: 2.4rem;
         }
@@ -119,13 +133,11 @@
     <form action="#">
         <div class="main">
             <h1>Login</h1>
-            <input type="text" name="name" id="name" placeholder="Name" required >
-            <input type="text" name="username" id="username" placeholder="Username" required minlength="6" maxlength="10">
-            <input type="text" name="Mo.NO." id="Number" placeholder="10 Digit Mo.No" minlength="10" maxlength="10">
-            <input type="date" name="BirthDate" id="Date" >
-            <input type="email" name="Email-id" id="email" placeholder="Email" required>
-            <input type="password" name="password" id="password" placeholder="Password " required minlength="6">
-            <input type="submit" value="Submit" class="button">
+            <input type="email" name="Email-id" id="email" placeholder="username or email" required>
+            <input type="password" name="password" id="password" placeholder="Password" required>
+            <button type="submit">Submit</button>
+            <p><a href="#">Forgot your Password</a></p>
+            <p><a href="http://127.0.0.1:5500/index.html">Singup Here</a></p>
         </div>
     </form>
 </body>
